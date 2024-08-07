@@ -2,5 +2,6 @@
 
 ## Composed of two branches
 
-- dev John
-- dev LJ
+- dev-John
+- dev-LJ
+
