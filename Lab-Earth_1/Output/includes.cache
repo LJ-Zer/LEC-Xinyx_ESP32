@@ -10,7 +10,27 @@
     "Includepath": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\variants\\esp32"
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\RLoRa.ino.cpp",
+    "Include": "LoRa.h",
+    "Includepath": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\arduino-LoRa\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\RLoRa.ino.cpp",
+    "Include": "SPI.h",
+    "Includepath": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\SPI\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\RLoRa.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\arduino-LoRa\\src\\LoRa.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\SPI\\src\\SPI.cpp",
     "Include": "",
     "Includepath": null
   }
