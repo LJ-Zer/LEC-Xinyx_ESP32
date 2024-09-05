@@ -2,41 +2,40 @@
 # 2 "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\RLoRa\\RLoRa.ino" 2
 # 3 "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\RLoRa\\RLoRa.ino" 2
 
+// Pin definitions
 
 
 
 
-void setup()
-{
+void setup() {
   Serial.begin(115200);
   while (!Serial);
+
   Serial.println("LoRa Receiver");
 
-  LoRa.setPins(5, 14, 2); //setup LoRa transceiver module
-
-  while (!LoRa.begin(433E6)) //433E6 - Asia, 866E6 - Europe, 915E6 - North America
-  {
-    Serial.println(".");
-    delay(500);
+  // setup LoRa transceiver module
+  LoRa.setPins(5, 14, 2);
+  if (!LoRa.begin(433E6)) { // Set the correct frequency for your module
+    Serial.println("Starting LoRa failed!");
+    while (1);
   }
-  LoRa.setSyncWord(0xA5);
-  Serial.println("LoRa Initializing OK!");
+  Serial.println("LoRa Initialized");
 }
 
-void loop()
-{
-  int packetSize = LoRa.parsePacket(); // try to parse packet
-  if (packetSize)
-  {
+void loop() {
+  // try to parse packet
+  int packetSize = LoRa.parsePacket();
+  if (packetSize) {
+    // received a packet
+    Serial.print("Received packet: '");
 
-    Serial.print("Received packet '");
-
-    while (LoRa.available()) // read packet
-    {
-      String LoRaData = LoRa.readString();
-      Serial.print(LoRaData);
+    // read packet
+    while (LoRa.available()) {
+      Serial.print((char)LoRa.read());
     }
-    Serial.print("' with RSSI "); // print RSSI of packet
+
+    // print RSSI of packet
+    Serial.print("' with RSSI ");
     Serial.println(LoRa.packetRssi());
   }
 }

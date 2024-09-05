@@ -239,8 +239,8 @@
    "@C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output/build_opt.h",
    "-IC:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\cores\\esp32",
    "-IC:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\variants\\esp32",
-   "-IC:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\arduino-LoRa\\src",
    "-IC:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\SPI\\src",
+   "-IC:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\arduino-LoRa\\src",
    "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\RLoRa.ino.cpp",
    "-o",
    "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\RLoRa.ino.cpp.o"
@@ -487,13 +487,13 @@
    "@C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output/build_opt.h",
    "-IC:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\cores\\esp32",
    "-IC:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\variants\\esp32",
-   "-IC:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\arduino-LoRa\\src",
    "-IC:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\SPI\\src",
-   "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\arduino-LoRa\\src\\LoRa.cpp",
+   "-IC:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\arduino-LoRa\\src",
+   "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\SPI\\src\\SPI.cpp",
    "-o",
-   "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\libraries\\arduino-LoRa\\LoRa.cpp.o"
+   "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\libraries\\SPI\\SPI.cpp.o"
   ],
-  "file": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\arduino-LoRa\\src\\LoRa.cpp"
+  "file": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\SPI\\src\\SPI.cpp"
  },
  {
   "directory": "c:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx",
@@ -735,12 +735,12 @@
    "@C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output/build_opt.h",
    "-IC:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\cores\\esp32",
    "-IC:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\variants\\esp32",
-   "-IC:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\arduino-LoRa\\src",
    "-IC:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\SPI\\src",
-   "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\SPI\\src\\SPI.cpp",
+   "-IC:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\arduino-LoRa\\src",
+   "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\arduino-LoRa\\src\\LoRa.cpp",
    "-o",
-   "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\libraries\\SPI\\SPI.cpp.o"
+   "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\libraries\\arduino-LoRa\\LoRa.cpp.o"
   ],
-  "file": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\SPI\\src\\SPI.cpp"
+  "file": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\arduino-LoRa\\src\\LoRa.cpp"
  }
 ]

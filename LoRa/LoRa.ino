@@ -1,40 +1,34 @@
-#include <LoRa.h>
 #include <SPI.h>
- 
-#define ss 5
-#define rst 14
-#define dio0 2
- 
-int counter = 0;
- 
-void setup() 
-{
-  Serial.begin(115200); 
+#include <LoRa.h>
+
+// Pin definitions
+#define SS 5
+#define RST 14
+#define DI0 2
+
+void setup() {
+  Serial.begin(115200);
   while (!Serial);
+
   Serial.println("LoRa Sender");
- 
-  LoRa.setPins(ss, rst, dio0);    //setup LoRa transceiver module
-  
-  while (!LoRa.begin(433E6))     //433E6 - Asia, 866E6 - Europe, 915E6 - North America
-  {
-    Serial.println(".");
-    delay(500);
+
+  // setup LoRa transceiver module
+  LoRa.setPins(SS, RST, DI0);
+  if (!LoRa.begin(433E6)) {  // Set the correct frequency for your module
+    Serial.println("Starting LoRa failed!");
+    while (1);
   }
-  LoRa.setSyncWord(0xA5);
-  Serial.println("LoRa Initializing OK!");
+  Serial.println("LoRa Initialized");
 }
- 
-void loop() 
-{
+
+void loop() {
   Serial.print("Sending packet: ");
-  Serial.println(counter);
- 
-  LoRa.beginPacket();   //Send LoRa packet to receiver
-  LoRa.print("hello ");
-  LoRa.print(counter);
+  Serial.println("Hello, LoRa!");
+
+  // send packet
+  LoRa.beginPacket();
+  LoRa.print("Hello, LoRa!");
   LoRa.endPacket();
- 
-  counter++;
- 
-  delay(10000);
+
+  delay(1000);  // wait for a second before sending the next packet
 }

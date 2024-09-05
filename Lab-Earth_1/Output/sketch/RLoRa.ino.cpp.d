@@ -130,6 +130,6 @@ C:\Users\John\ Buenaflor\Git_Repo\LEC-Xinyx\Lab-Earth_1\Output\sketch\RLoRa.ino.
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7/tools/sdk/esp32/include/spi_flash/include/esp_spi_flash.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7/tools/sdk/esp32/include/spi_flash/include/esp_spi_flash_counters.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7/tools/sdk/esp32/include/esp_hw_support/include/soc/esp32/spiram.h \
- C:\Users\John\ Buenaflor\Documents\Arduino\libraries\arduino-LoRa\src/LoRa.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\libraries\SPI\src/SPI.h \
- C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\cores\esp32/esp32-hal-spi.h
+ C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\cores\esp32/esp32-hal-spi.h \
+ C:\Users\John\ Buenaflor\Documents\Arduino\libraries\arduino-LoRa\src/LoRa.h
