@@ -3,6 +3,6 @@
     "board": "esp32:esp32:esp32",
     "programmer": "esptool",
     "output": "C:/Users/John Buenaflor/Git_Repo/LEC-Xinyx/Lab-Earth_1/Output",
-    "sketch": "RLoRa/RLoRa.ino",
-    "port": "COM7"
+    "sketch": "trial/trial.ino",
+    "port": "COM3"
 }
