@@ -1,7 +1,7 @@
 // Define pins for MiCS-6814 sensors
-#define CO_PIN 34      // CO (MiCS-6814)
-#define NO2_PIN 35     // NO2 (MiCS-6814)
-#define NH3_PIN 32     // NH3 (MiCS-6814)
+#define CO_PIN 32     // CO (MiCS-6814)
+#define NO2_PIN 34     // NO2 (MiCS-6814)
+#define NH3_PIN 35     // NH3 (MiCS-6814)
 
 // Define pins for MQ sensors
 #define MQ4_PIN 33     // MQ-4

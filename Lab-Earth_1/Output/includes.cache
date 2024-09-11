@@ -10,37 +10,37 @@
     "Includepath": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\variants\\esp32"
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\LoRa.ino.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
     "Include": "SPI.h",
     "Includepath": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\SPI\\src"
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\LoRa.ino.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
     "Include": "LoRa.h",
     "Includepath": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\arduino-LoRa\\src"
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\LoRa.ino.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
     "Include": "Wire.h",
     "Includepath": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\Wire\\src"
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\LoRa.ino.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
     "Include": "Adafruit_Sensor.h",
     "Includepath": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor"
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\LoRa.ino.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
     "Include": "Adafruit_BME680.h",
     "Includepath": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BME680_Library"
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\LoRa.ino.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
     "Include": "Adafruit_I2CDevice.h",
     "Includepath": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO"
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\LoRa.ino.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
     "Include": "",
     "Includepath": null
   },

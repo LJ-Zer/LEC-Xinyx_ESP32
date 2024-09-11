@@ -245,11 +245,11 @@
    "-IC:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
    "-IC:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BME680_Library",
    "-IC:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO",
-   "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\LoRa.ino.cpp",
+   "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
    "-o",
-   "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\LoRa.ino.cpp.o"
+   "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp.o"
   ],
-  "file": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\LoRa.ino.cpp"
+  "file": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp"
  },
  {
   "directory": "c:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx",
@@ -2260,11 +2260,11 @@
    "-IC:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
    "-IC:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BME680_Library",
    "-IC:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO",
-   "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_I2CDevice.cpp",
+   "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_BusIO_Register.cpp",
    "-o",
-   "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\libraries\\Adafruit_BusIO\\Adafruit_I2CDevice.cpp.o"
+   "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\libraries\\Adafruit_BusIO\\Adafruit_BusIO_Register.cpp.o"
   ],
-  "file": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_I2CDevice.cpp"
+  "file": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_BusIO_Register.cpp"
  },
  {
   "directory": "c:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx",
@@ -2512,10 +2512,10 @@
    "-IC:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
    "-IC:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BME680_Library",
    "-IC:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO",
-   "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_BusIO_Register.cpp",
+   "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_I2CDevice.cpp",
    "-o",
-   "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\libraries\\Adafruit_BusIO\\Adafruit_BusIO_Register.cpp.o"
+   "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\libraries\\Adafruit_BusIO\\Adafruit_I2CDevice.cpp.o"
   ],
-  "file": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_BusIO_Register.cpp"
+  "file": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_I2CDevice.cpp"
  }
 ]
