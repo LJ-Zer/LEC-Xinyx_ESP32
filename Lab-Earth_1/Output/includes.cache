@@ -10,37 +10,32 @@
     "Includepath": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\variants\\esp32"
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_2.ino.cpp",
     "Include": "SPI.h",
     "Includepath": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\SPI\\src"
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_2.ino.cpp",
     "Include": "LoRa.h",
     "Includepath": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\arduino-LoRa\\src"
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
-    "Include": "Wire.h",
-    "Includepath": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\Wire\\src"
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_2.ino.cpp",
+    "Include": "HTTPClient.h",
+    "Includepath": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\HTTPClient\\src"
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
-    "Include": "Adafruit_Sensor.h",
-    "Includepath": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor"
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_2.ino.cpp",
+    "Include": "WiFiClient.h",
+    "Includepath": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src"
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
-    "Include": "Adafruit_BME680.h",
-    "Includepath": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BME680_Library"
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_2.ino.cpp",
+    "Include": "WiFiClientSecure.h",
+    "Includepath": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFiClientSecure\\src"
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
-    "Include": "Adafruit_I2CDevice.h",
-    "Includepath": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO"
-  },
-  {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_1.ino.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_2.ino.cpp",
     "Include": "",
     "Includepath": null
   },
@@ -55,37 +50,67 @@
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\Wire\\src\\Wire.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\HTTPClient\\src\\HTTPClient.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor\\Adafruit_Sensor.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFi.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BME680_Library\\Adafruit_BME680.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiAP.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BME680_Library\\bme68x.c",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiClient.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_BusIO_Register.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiGeneric.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_I2CDevice.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiMulti.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_SPIDevice.cpp",
+    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiSTA.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiScan.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiServer.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiUdp.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFiClientSecure\\src\\WiFiClientSecure.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFiClientSecure\\src\\esp_crt_bundle.c",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFiClientSecure\\src\\ssl_client.cpp",
     "Include": "",
     "Includepath": null
   }
