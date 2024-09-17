@@ -10,45 +10,43 @@
 #define DI0 2
 
 // Pin definitions for MiCS-6814 and MQ sensors
-#define cmn 32    // CO (MiCS-6814)
-#define ngd 34    // NO2 (MiCS-6814)
-#define amn 35    // NH3 (MiCS-6814)
-#define mtn 33    // MQ-4 (Methane - CH4)
-#define lpg 25    // MQ-6 (LPG)
-#define hgn 26    // MQ-8 (Hydrogen - H2)
-#define slfr 27   // MQ-136 (Sulfur Dioxide - SO2)
+#define cmn 34     // CO (MiCS-6814)
+#define ngd 35    // NO2 (MiCS-6814)
+#define amn 32    // NH3 (MiCS-6814)
+#define mtn 33    // MQ-4
+#define lpg 25    // MQ-6
+#define hgn 26    // MQ-8
+#define slfr 27  // MQ-136
 
 // Pin definition for Analog rain sensor
 #define rain 13
 
-const int voltageSensor = 12; // solar sensor
+/////////////////////////////////////////////////////////
+// Constants
+const int hallSensorPin = 0;  // Pin connected to the Hall sensor (digital pin 2)
+const float radius = 0.15;    // Radius of the anemometer's rotating part in meters (adjust as per your device)
+const float calibrationFactor = 1.2;  // Calibration factor depending on anemometer (adjust as needed)
+
+// Variables
+volatile int rotationCount = 0;
+unsigned long lastMillis = 0;
+unsigned long interval = 2000; // Measurement interval (e.g., 2 seconds)
+float windSpeed = 0;
+////////////////////////////////////////////////////////
+
+const int voltageSensor = 12; //solar sensor
+const int wdrctn = 4; //wind direction
 float vOUT = 0.0;
 float vIN = 0.0;
 float R1 = 30000.0;
 float R2 = 7500.0;
 int value = 0;
-
+int value2 = 0;
+float drctn = 0.0;
+float vOUT1 = 0.0;
 int RelayPin = 17; // solar relay
 
 Adafruit_BME680 bme;
-
-// Calibration constants for MQ sensors
-float R0_SO2 = 2000.0;  // Clean air resistance for SO2 (MQ-136)
-float S_SO2 = 3.0;      // Sensitivity factor for SO2
-
-float R0_H2 = 10000.0;  // Clean air resistance for H2 (MQ-8)
-float S_H2 = 0.6;       // Sensitivity factor for H2
-
-float R0_LPG = 10000.0; // Clean air resistance for LPG (MQ-6)
-float S_LPG = 0.6;      // Sensitivity factor for LPG
-
-float R0_CH4 = 10000.0; // Clean air resistance for Methane (MQ-4)
-float S_CH4 = 0.6;      // Sensitivity factor for Methane
-
-// Calibration constants for MiCS-6814
-float R0_CO = 150.0;    // Clean air resistance for CO (MiCS-6814)
-float R0_NO2 = 1.0;     // Clean air resistance for NO2 (MiCS-6814)
-float R0_NH3 = 1500.0;  // Clean air resistance for NH3 (MiCS-6814)
 
 void setup() {
   // Initialize serial communication for debugging
@@ -59,6 +57,9 @@ void setup() {
   digitalWrite(RelayPin, LOW);
 
   pinMode(rain, INPUT);
+
+  pinMode(hallSensorPin, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(hallSensorPin), countRotation, FALLING);
 
   // Initialize BME680 sensor
   if (!bme.begin()) {
@@ -79,6 +80,7 @@ void setup() {
     while (1);
   }
   Serial.println("LoRa Initialized");
+
 }
 
 void loop() {
@@ -89,13 +91,30 @@ void loop() {
   Serial.print("Rain Sensor Value: ");
   Serial.println(rainValue);
 
-  // Solar sensor reading and calculation
+  unsigned long currentMillis = millis();
+  
+  // Check if it's time to calculate wind speed
+  if (currentMillis - lastMillis >= interval) {
+    // Calculate wind speed
+    float rotationsPerSecond = rotationCount / (interval / 1000.0); // rotations per second
+    float windSpeed = calculateWindSpeed(rotationsPerSecond); // in m/s
+
+    // Output results
+    Serial.print("Wind Speed: ");
+    Serial.print(windSpeed);
+    Serial.println(" m/s");
+
+    // Reset count and time
+    rotationCount = 0;
+    lastMillis = currentMillis;
+  }
+
   value = analogRead(voltageSensor);
   vOUT = (value * 3.3) / 1024.0;
-  vIN = ((vOUT / (R2 / (R1 + R2))) / 3.3) - 3.6;
+  vIN = ((vOUT / (R2/(R1+R2)))/3.3);
   Serial.print("Input Solar Voltage: ");
   Serial.println(vIN);
-  delay(1000);
+  delay(100);
 
   if (vIN <= 3.5) {
     digitalWrite(RelayPin, LOW);
@@ -103,8 +122,18 @@ void loop() {
   }
   if (vIN >= 4) {
     digitalWrite(RelayPin, HIGH);
-    delay(100);
+    delay(100);    
   }
+  //////////////////////////////////////////
+
+  value2 = analogRead(wdrctn);
+  vOUT1 = (value2 * 3.3) / 1024.0;
+  drctn = ((vOUT1 / (R2/(R1+R2)))/3.3);
+  Serial.print("Drctn_Vltg: ");
+  Serial.println(drctn);
+  delay(100);
+  
+  ////////////////////////////////////////////
 
   // Start BME680 sensor reading
   unsigned long endTime = bme.beginReading();
@@ -126,34 +155,16 @@ void loop() {
   float hum = bme.humidity;
   float gas = bme.gas_resistance / 1000.0; // Convert to kOhms
 
-  // Read analog values from MQ and MiCS-6814 sensors
-  int so2_raw = analogRead(slfr);   // SO2
-  int h2_raw = analogRead(hgn);     // H2
-  int lpg_raw = analogRead(lpg);    // LPG
-  int ch4_raw = analogRead(mtn);    // Methane (CH4)
-  int co_raw = analogRead(cmn);     // CO (MiCS-6814)
-  int no2_raw = analogRead(ngd);    // NO2 (MiCS-6814)
-  int nh3_raw = analogRead(amn);    // NH3 (MiCS-6814)
+  // Read analog values from MiCS-6814 sensors
+  int co = analogRead(cmn);
+  int no2 = analogRead(ngd);
+  int nh3 = analogRead(amn);
 
-  // Calculate sensor resistance (Rs) based on raw values
-  float Rs_SO2 = so2_raw;
-  float Rs_H2 = h2_raw;
-  float Rs_LPG = lpg_raw;
-  float Rs_CH4 = ch4_raw;
-  float Rs_CO = co_raw;
-  float Rs_NO2 = no2_raw;
-  float Rs_NH3 = nh3_raw;
-
-  // Convert to ppm using calibration formulas
-  float ppm_SO2 = (Rs_SO2 / R0_SO2) * S_SO2 * 50.0;   // 50 ppm SO2 is the reference
-  float ppm_H2 = (Rs_H2 / R0_H2) * S_H2 * 1000.0;     // 1000 ppm H2 is the reference
-  float ppm_LPG = (Rs_LPG / R0_LPG) * S_LPG * 1000.0; // 1000 ppm CH4 is the reference
-  float ppm_CH4 = (Rs_CH4 / R0_CH4) * S_CH4 * 1000.0; // 1000 ppm CH4 is the reference
-
-  // MiCS-6814 calculations (calibrate for CO, NO2, NH3)
-  float ppm_CO = (Rs_CO / R0_CO) * 1000.0;   // CO range is 1–1000 ppm
-  float ppm_NO2 = (Rs_NO2 / R0_NO2) * 10.0;  // NO2 range is 0.05–10 ppm
-  float ppm_NH3 = (Rs_NH3 / R0_NH3) * 500.0; // NH3 range is 1–500 ppm
+  // Read analog values from MQ sensors
+  int mq4 = analogRead(mtn);
+  int mq6 = analogRead(lpg);
+  int mq8 = analogRead(hgn);
+  int mq136 = analogRead(slfr);
 
   // Display BME680 sensor data on Serial Monitor
   Serial.print(F("Temperature = "));
@@ -172,54 +183,63 @@ void loop() {
   Serial.print(gas);
   Serial.println(F(" KOhms"));
 
-  // Display calibrated MiCS-6814 sensor data
-  Serial.print("CO Concentration: ");
-  Serial.print(ppm_CO);
-  Serial.println(" ppm");
+  // Display MiCS-6814 and MQ sensor data on Serial Monitor
+  Serial.print("CO Value: ");
+  Serial.print(co);
+  Serial.print("\tNO2 Value: ");
+  Serial.print(no2);
+  Serial.print("\tNH3 Value: ");
+  Serial.println(nh3);
 
-  Serial.print("NO2 Concentration: ");
-  Serial.print(ppm_NO2);
-  Serial.println(" ppm");
-
-  Serial.print("NH3 Concentration: ");
-  Serial.print(ppm_NH3);
-  Serial.println(" ppm");
-
-  // Display calibrated MQ sensor data
-  Serial.print("SO2 Concentration: ");
-  Serial.print(ppm_SO2);
-  Serial.println(" ppm");
-
-  Serial.print("H2 Concentration: ");
-  Serial.print(ppm_H2);
-  Serial.println(" ppm");
-
-  Serial.print("LPG Concentration: ");
-  Serial.print(ppm_LPG);
-  Serial.println(" ppm");
-
-  Serial.print("Methane (CH4) Concentration: ");
-  Serial.print(ppm_CH4);
-  Serial.println(" ppm");
+  Serial.print("MQ-4 Value: ");
+  Serial.print(mq4);
+  Serial.print("\tMQ-6 Value: ");
+  Serial.print(mq6);
+  Serial.print("\tMQ-8 Value: ");
+  Serial.print(mq8);
+  Serial.print("\tMQ-136 Value: ");
+  Serial.println(mq136);
 
   // Prepare data packet
   String dataPacket = "T:" + String(temp) + "C," +
                       "P:" + String(pres) + "hPa," +
                       "H:" + String(hum) + "%," +
                       "G:" + String(gas) + "KOhms," +
-                      "CO:" + String(ppm_CO) + "ppm," +
-                      "NO2:" + String(ppm_NO2) + "ppm," +
-                      "NH3:" + String(ppm_NH3) + "ppm," +
-                      "SO2:" + String(ppm_SO2) + "ppm," +
-                      "H2:" + String(ppm_H2) + "ppm," +
-                      "LPG:" + String(ppm_LPG) + "ppm," +
-                      "CH4:" + String(ppm_CH4) + "ppm";
+                      "CO:" + String(co) + "," +
+                      "NO2:" + String(no2) + "," +
+                      "NH3:" + String(nh3) + "," +
+                      "MQ4:" + String(mq4) + "," +
+                      "MQ6:" + String(mq6) + "," +
+                      "MQ8:" + String(mq8) + "," +
+                      "MQ136:" + String(mq136) + "," +
+                      "Rain:" + String(rainValue) + "," +
+                      "Svlts:" + String(vIN) + "," +
+                      "DrctnVolts:" + String(drctn) + "," +
+                      "WS:" + String(windSpeed);
 
-  // Send data over LoRa
+  // Send packet over LoRa
+  Serial.print("Sending packet: ");
+  Serial.println(dataPacket);
+
   LoRa.beginPacket();
   LoRa.print(dataPacket);
   LoRa.endPacket();
-  
-  // Wait before next reading
-  delay(5000);
+
+  Serial.print("Data packet length: ");
+  Serial.println(dataPacket.length());
+
+
+  delay(3000); // Wait before sending next packet
+}
+
+// Interrupt function to count each rotation
+void countRotation() {
+  rotationCount++;
+}
+
+// Function to calculate wind speed from rotations per second
+float calculateWindSpeed(float rotationsPerSecond) {
+  float circumference = 2 * PI * radius; // Circumference of the rotating part
+  float windSpeed = (rotationsPerSecond * circumference) * calibrationFactor; // Speed = rotations/sec * circumference
+  return windSpeed;
 }

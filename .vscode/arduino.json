@@ -4,5 +4,5 @@
     "programmer": "esptool",
     "output": "C:/Users/John Buenaflor/Git_Repo/LEC-Xinyx/Lab-Earth_1/Output",
     "sketch": "Lab-Earth_2\\Lab-Earth_2.ino",
-    "port": "COM3"
+    "port": "COM7"
 }

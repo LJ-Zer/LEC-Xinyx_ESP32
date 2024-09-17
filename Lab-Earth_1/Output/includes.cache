@@ -21,13 +21,13 @@
   },
   {
     "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_2.ino.cpp",
-    "Include": "HTTPClient.h",
-    "Includepath": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\HTTPClient\\src"
+    "Include": "WiFi.h",
+    "Includepath": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src"
   },
   {
     "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_2.ino.cpp",
-    "Include": "WiFiClient.h",
-    "Includepath": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src"
+    "Include": "HTTPClient.h",
+    "Includepath": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\HTTPClient\\src"
   },
   {
     "Sourcefile": "C:\\Users\\John Buenaflor\\Git_Repo\\LEC-Xinyx\\Lab-Earth_1\\Output\\sketch\\Lab-Earth_2.ino.cpp",
@@ -46,11 +46,6 @@
   },
   {
     "Sourcefile": "C:\\Users\\John Buenaflor\\Documents\\Arduino\\libraries\\arduino-LoRa\\src\\LoRa.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\HTTPClient\\src\\HTTPClient.cpp",
     "Include": "",
     "Includepath": null
   },
@@ -96,6 +91,11 @@
   },
   {
     "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\WiFi\\src\\WiFiUdp.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\John Buenaflor\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.7\\libraries\\HTTPClient\\src\\HTTPClient.cpp",
     "Include": "",
     "Includepath": null
   },
