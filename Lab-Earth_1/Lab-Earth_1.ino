@@ -211,11 +211,11 @@ void loop() {
                       "MQ4:" + String(mq4) + "," +
                       "MQ6:" + String(mq6) + "," +
                       "MQ8:" + String(mq8) + "," +
-                      "MQ136:" + String(mq136) + "," +
-                      "Rain:" + String(rainValue) + "," +
                       "Svlts:" + String(vIN) + "," +
-                      "DrctnVolts:" + String(drctn) + "," +
-                      "WS:" + String(windSpeed);
+                      "DVlts:" + String(drctn) + "," +
+                      "WS:" + String(windSpeed) + "," +
+                      "MQ136:" + String(mq136) + "," +
+                      "Rain:" + String(rainValue);
 
   // Send packet over LoRa
   Serial.print("Sending packet: ");

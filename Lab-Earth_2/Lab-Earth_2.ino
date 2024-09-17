@@ -54,7 +54,7 @@ void loop() {
     float temp, pres, hum, gas, vIN, drctn, windSpeed;
     int co, no2, nh3, mq4, mq6, mq8, mq136, rainValue;
     sscanf(receivedData.c_str(), 
-           "T:%fC,P:%fhPa,H:%f%%,G:%fKOhms,SVolts:%f,DrctnVolts:%f,WS%f,CO:%d,NO2:%d,NH3:%d,SO2:%d,H2:%d,LPG:%d,CH4:%d,Rain:%d",
+           "T:%fC,P:%fhPa,H:%f%%,G:%fKOhms,Svlts:%f,DVlts:%f,WS%f,CO:%d,NO2:%d,NH3:%d,SO2:%d,H2:%d,LPG:%d,CH4:%d,Rain:%d",
            &temp, &pres, &hum, &gas, &vIN, &drctn, &windSpeed,&co, &no2, &nh3, &mq4, &mq6, &mq8, &mq136, &rainValue);
 
     // Display parsed data
@@ -74,19 +74,19 @@ void loop() {
     Serial.print(gas);
     Serial.println(" KOhms");
 
-    Serial.print("CO Concentration: ");
+    Serial.print("CO: ");
     Serial.print(co);
-    Serial.print("\tNO2 Concentration: ");
+    Serial.print("\tNO2: ");
     Serial.print(no2);
-    Serial.print("\tNH3 Concentration: ");
+    Serial.print("\tNH3: ");
     Serial.print(nh3);
-    Serial.print("\tSO2 Concentration: ");
+    Serial.print("\tSO2: ");
     Serial.print(mq136);
-    Serial.print("\tH2 Concentration: ");
+    Serial.print("\tH2: ");
     Serial.print(mq8);
-    Serial.print("\tLPG Concentration: ");
+    Serial.print("\tLPG: ");
     Serial.print(mq6);
-    Serial.print("\tMethane (CH4) Concentration: ");
+    Serial.print("\tMethane: ");
     Serial.print(mq4);
     Serial.print("\tRain Sensor Value: ");
     Serial.print(rainValue);
