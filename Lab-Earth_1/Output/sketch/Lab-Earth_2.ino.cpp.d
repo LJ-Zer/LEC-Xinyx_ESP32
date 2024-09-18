@@ -133,6 +133,10 @@ C:\Users\John\ Buenaflor\Git_Repo\LEC-Xinyx\Lab-Earth_1\Output\sketch\Lab-Earth_
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\libraries\SPI\src/SPI.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\cores\esp32/esp32-hal-spi.h \
  C:\Users\John\ Buenaflor\Documents\Arduino\libraries\arduino-LoRa\src/LoRa.h \
+ C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\libraries\HTTPClient\src/HTTPClient.h \
+ C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\libraries\WiFi\src/WiFiClient.h \
+ C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\cores\esp32/Client.h \
+ C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\libraries\WiFiClientSecure\src/WiFiClientSecure.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\libraries\WiFi\src/WiFi.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\cores\esp32/Print.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\cores\esp32/IPv6Address.h \
@@ -186,15 +190,11 @@ C:\Users\John\ Buenaflor\Git_Repo\LEC-Xinyx\Lab-Earth_1\Output\sketch\Lab-Earth_
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\libraries\WiFi\src/WiFiAP.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\libraries\WiFi\src/WiFiScan.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\libraries\WiFi\src/WiFiClient.h \
- C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\cores\esp32/Client.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\libraries\WiFi\src/WiFiServer.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\cores\esp32/Server.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\libraries\WiFi\src/WiFiUdp.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\cores\esp32/Udp.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\cores\esp32/cbuf.h \
- C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\libraries\HTTPClient\src/HTTPClient.h \
- C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\libraries\WiFi\src/WiFiClient.h \
- C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\libraries\WiFiClientSecure\src/WiFiClientSecure.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7\libraries\WiFiClientSecure\src/ssl_client.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7/tools/sdk/esp32/include/mbedtls/mbedtls/include/mbedtls/platform.h \
  C:\Users\John\ Buenaflor\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.7/tools/sdk/esp32/include/mbedtls/port/include/mbedtls/esp_config.h \
