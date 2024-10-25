@@ -1,4 +1,4 @@
-# LEC-Xinyx_ESP32 (LAB-EARTH + C Xinyx Unlocked 2024 ADI ESP32 38 Pin Source Codes) 
+# LEC-Xinyx_ESP32 (LAB-EARTH + C Xinyx Unlocked 2024 ESP32 38 Pin Source Codes) 
 LAB-EARTH + C as a hardware itself is a seamless and compact version of a typical weather station which features relevant and highly-demand systems, providing information about the temperature, humidity, atmospheric pressure, wind speed, wind direction, rain predictions, air quality, and cloud formations.
 
 ## The following folders are the modified source codes from the libraries of Arduino.
